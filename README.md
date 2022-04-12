@@ -20,4 +20,37 @@ Save the Clean data to the file
 
 
 # CODE
+~~~
+import pandas as pd
+df = pd.read_csv("Data_set.csv")
+df.head(10)
+df.tail()
+df.info()
+df.isnull().sum()
+df['show_name']=df['show_name'].fillna(df['show_name'].mode()[0])
+df.head(10)
+df['show_name']=df['show_name'].fillna(df['show_name'].mode()[0])
+df.head()
+df['rating']=df['rating'].fillna(df['rating'].mean())
+df.info()
+df['aired_on']=df['aired_on'].fillna(df['aired_on'].mode()[0])
+df.info()
+df['original_network']=df['original_network'].fillna(df['original_network'].mode()[0])
+df.info()
+df['current_overall_rank']=df['current_overall_rank'].fillna(df['current_overall_rank'].mode()[0])
+df.info()
+df['watchers']=df['watchers'].fillna(df['watchers'].mode()[0])
+df.head()
+df.info()
+df.isnull().sum()
+~~~
+
 # OUPUT
+![output](./d1.png)
+![output](./d2.png)
+![output](./d3.png)
+![output](./d4.png)
+![output](./d5.png)
+![output](./d6.png)
+![output](./d7.png)
+
